@@ -24,3 +24,17 @@ int countNegativeNumbers(vector<vector<int>> &mat)
 
 Approach 2:
 
+int countNegativeNumbers(vector<vector<int>> &mat)
+{
+int ans=0;
+for(int i=0;i<mat.size();i++)
+     {
+        for(int j=0;j<mat[i].size();j++){
+             if(mat[i][j]<0){
+            ans+=mat[i].size()-j;
+            break;
+          }
+       }
+}
+	return ans;
+}
